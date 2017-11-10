@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Fontis BPAY Ref Generator
  *
@@ -27,12 +29,9 @@ class Generator
      * @param int $minimumLength
      * @return string
      */
-    public function calcMod10V1($number, $separator = "", $minimumLength = 6)
+    public function calcMod10V1(string $number, string $separator = "", int $minimumLength = 6) : string
     {
-        // TODO: Remove manual cast when we no longer support PHP5
-        $number = (string) $number;
-
-        $revstr = strrev(intval($number));
+        $revstr = strrev((string) intval($number));
         $revstrLen = strlen($revstr);
         $total = 0;
         for ($i = 0; $i < $revstrLen; $i++) {
@@ -64,11 +63,8 @@ class Generator
      * @param string $number
      * @return string
      */
-    public function calcMod10V5($number)
+    public function calcMod10V5(string $number) : string
     {
-        // TODO: Remove manual cast when we no longer support PHP5
-        $number = (string) $number;
-
         // Get the length of the seed number
         $length = strlen($number);
 
