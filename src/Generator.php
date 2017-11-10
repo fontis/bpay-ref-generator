@@ -30,7 +30,7 @@ class Generator
      * @param int $minimumLength
      * @return string
      */
-    public function calcMod10V1(string $number, string $separator = "", int $minimumLength = 6) : string
+    public function calcMod10V1(string $number, string $separator = "", int $minimumLength = 6): string
     {
         $revstr = strrev((string) intval($number));
         $revstrLen = strlen($revstr);
@@ -64,7 +64,7 @@ class Generator
      * @param string $number
      * @return string
      */
-    public function calcMod10V5(string $number) : string
+    public function calcMod10V5(string $number): string
     {
         // Get the length of the seed number
         $length = strlen($number);
