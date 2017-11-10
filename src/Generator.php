@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 
 /**
  * Fontis BPAY Ref Generator
@@ -16,6 +15,8 @@ declare(strict_types=1);
  * @copyright  Copyright (c) 2016 Fontis Pty. Ltd. (https://www.fontis.com.au)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
+
+declare(strict_types=1);
 
 namespace Fontis\BpayRefGenerator;
 
