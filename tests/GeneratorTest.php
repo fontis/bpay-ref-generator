@@ -2,14 +2,18 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
 use Fontis\BpayRefGenerator\Generator;
+use PHPUnit\Framework\TestCase;
 
 class GeneratorTest extends TestCase
 {
+    /**
+     * @var Generator
+     */
     private $generator;
 
-    public function setUp() {
+    public function setUp()
+    {
         $this->generator = new Generator();
     }
 
@@ -18,7 +22,6 @@ class GeneratorTest extends TestCase
         $number = $this->generator->calcMod10V1('1234567890');
 
         $this->assertSame('12345678903', $number);
-
     }
 
     public function testItGeneratesValidMod10V5()
