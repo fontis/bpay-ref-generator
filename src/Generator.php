@@ -74,7 +74,7 @@ class Generator
         // For each character in seed number, sum the character multiplied by its one
         // based array position (instead of normal PHP zero based numbering)
         for ($i = 0; $i < $length; $i++) {
-            $total += $number{$i} * ($i + 1);
+            $total += $number[$i] * ($i + 1);
         }
 
         // The check digit is the result of the sum total from above mod 10
